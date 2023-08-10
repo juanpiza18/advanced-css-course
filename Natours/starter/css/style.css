@@ -6,3 +6,41 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define Font inherit to all elements */
+body {
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  /* 1.7 bigger that the default */
+  line-height: 1.7;
+  color: #777;
+  padding: 1.875rem;
+}
+
+.header {
+  height: 95vh;
+  /* to specify gradients we use background image always */
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.8),
+      rgba(40, 180, 133, 0.8)
+    ),
+    url("../img/hero.jpg");
+  /* Fit the element inside the box and the viewport */
+  background-size: cover;
+  /* Top of the image always stays in the same position it doesnt change */
+  background-position: top;
+  /* Clip path property each parameter represents a coordinate in x --> y | 
+   1: we do not want to move it so it is 0 0
+   2: 100% of the width x, and y we don't want to move it
+   3: x 100%, y change cause we want the point to be in 75vh
+   4: in x we don't move the coordinate, and in y we move to 100% of the view*/
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
