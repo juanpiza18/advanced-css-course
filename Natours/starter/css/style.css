@@ -43,4 +43,44 @@ body {
    3: x 100%, y change cause we want the point to be in 75vh
    4: in x we don't move the coordinate, and in y we move to 100% of the view*/
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* Position that will take into account */
+  position: relative;
+}
+
+.logo-box {
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+}
+
+.logo {
+  height: 2.188rem;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  /* Shifted  */
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+}
+
+.heading-primary-main {
+  display: block;
+  letter-spacing: 2.188rem;
+  font-size: 3.75rem;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 1.25rem;
+  letter-spacing: 0.938rem;
+  font-weight: 700;
 }
