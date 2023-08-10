@@ -57,6 +57,10 @@ body {
   height: 2.188rem;
 }
 
+.logo:hover {
+  animation: moveInRight 1s ease-out;
+}
+
 .text-box {
   position: absolute;
   top: 40%;
@@ -76,6 +80,13 @@ body {
   display: block;
   letter-spacing: 2.188rem;
   font-size: 3.75rem;
+  animation-name: moveInLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+
+  backface-visibility: hidden;
+  /* animation-delay: 3s; */
+  /* animation: moveInLeft ease-in 1s; */
 }
 
 .heading-primary-sub {
@@ -83,4 +94,35 @@ body {
   font-size: 1.25rem;
   letter-spacing: 0.938rem;
   font-weight: 700;
+  animation: moveInRight 2s ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    /* invisible */
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    /* show the element */
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
