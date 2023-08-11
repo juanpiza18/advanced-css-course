@@ -67,6 +67,7 @@ body {
   left: 50%;
   /* Shifted  */
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .heading-primary {
@@ -74,6 +75,7 @@ body {
   text-transform: uppercase;
   font-weight: 400;
   text-align: center;
+  margin-bottom: 3.75rem;
 }
 
 .heading-primary-main {
@@ -95,6 +97,71 @@ body {
   letter-spacing: 0.938rem;
   font-weight: 700;
   animation: moveInRight 2s ease-out;
+}
+
+/*  interactive button with animations */
+.btn:link,
+.btn:visited {
+  /* inline block to add some space, margin  */
+  display: inline-block;
+  position: relative;
+  padding: 0.938rem 2.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 6.25rem;
+  /* we should add this transition to add a correct animation */
+  transition: transform 0.2s ease-out;
+  /* for the after to be behind it */
+  position: relative;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  /* offset  */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+}
+
+/* Virtual element right after the element powerful to add cool animations 
+   behind the BTN element
+*/
+.btn::after {
+  /* Content property to appear and display property*/
+  content: "";
+  display: inline-block;
+  /*  same dimension of the button */
+  height: 100%;
+  width: 100%;
+  border-radius: 6.25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* to be behind the element */
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  /* Applies animation start to the element right away */
+  animation-fill-mode: backwards;
 }
 
 @keyframes moveInLeft {
@@ -124,5 +191,16 @@ body {
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
