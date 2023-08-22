@@ -61,21 +61,21 @@ body {
   position: relative;
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo {
+.header__logo {
   height: 3.5rem;
 }
 
-.logo:hover {
+.header__logo:hover {
   animation: moveInRight 1s ease-out;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -92,7 +92,7 @@ body {
   margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block;
   letter-spacing: 3.5rem;
   font-size: 6rem;
@@ -105,7 +105,7 @@ body {
   /* animation: moveInLeft ease-in 1s; */
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
   font-size: 2.4rem;
   letter-spacing: 1.5rem;
@@ -130,7 +130,7 @@ body {
   position: relative;
 }
 
-.btn-white {
+.btn--white {
   background-color: #fff;
   color: #777;
 }
@@ -164,7 +164,7 @@ body {
   transition: all 0.4s;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: #fff;
 }
 
@@ -173,7 +173,7 @@ body {
   opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
   /* Applies animation start to the element right away */
   animation-fill-mode: backwards;
