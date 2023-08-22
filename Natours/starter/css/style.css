@@ -7,21 +7,35 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+/* ROOT font size is defined in the HTML property*/
+html {
+  /* 1 rem will be 10 px */
+  /* Skill to tell the browser to use a percentage 
+   cause if the user change the font size the page will always use the 62 percent
+   example: default font size 16px * 0.625 = 10 px
+  */
+
+  font-size: 62.5%;
 }
 
 /* Define Font inherit to all elements */
 body {
   font-family: "lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  /* font-size: 16px; */
   /* 1.7 bigger that the default */
   line-height: 1.7;
   color: #777;
-  padding: 1.875rem;
+  padding: 3rem;
+  box-sizing: border-box;
 }
 
 .header {
@@ -49,12 +63,12 @@ body {
 
 .logo-box {
   position: absolute;
-  top: 2.5rem;
-  left: 2.5rem;
+  top: 4rem;
+  left: 4rem;
 }
 
 .logo {
-  height: 2.188rem;
+  height: 3.5rem;
 }
 
 .logo:hover {
@@ -75,13 +89,13 @@ body {
   text-transform: uppercase;
   font-weight: 400;
   text-align: center;
-  margin-bottom: 3.75rem;
+  margin-bottom: 6rem;
 }
 
 .heading-primary-main {
   display: block;
-  letter-spacing: 2.188rem;
-  font-size: 3.75rem;
+  letter-spacing: 3.5rem;
+  font-size: 6rem;
   animation-name: moveInLeft;
   animation-duration: 2s;
   animation-timing-function: ease-out;
@@ -93,8 +107,8 @@ body {
 
 .heading-primary-sub {
   display: block;
-  font-size: 1.25rem;
-  letter-spacing: 0.938rem;
+  font-size: 2.4rem;
+  letter-spacing: 1.5rem;
   font-weight: 700;
   animation: moveInRight 2s ease-out;
 }
@@ -105,10 +119,11 @@ body {
   /* inline block to add some space, margin  */
   display: inline-block;
   position: relative;
-  padding: 0.938rem 2.5rem;
+  padding: 1.5rem 4rem;
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 6.25rem;
+  border-radius: 10rem;
+  font-size: 1.6rem;
   /* we should add this transition to add a correct animation */
   transition: transform 0.2s ease-out;
   /* for the after to be behind it */
@@ -121,13 +136,13 @@ body {
 }
 
 .btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-0.3rem);
   /* offset  */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
-  transform: translateY(-1px);
+  transform: translateY(-0.1rem);
 }
 
 /* Virtual element right after the element powerful to add cool animations 
@@ -140,7 +155,7 @@ body {
   /*  same dimension of the button */
   height: 100%;
   width: 100%;
-  border-radius: 6.25rem;
+  border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -168,10 +183,10 @@ body {
   0% {
     /* invisible */
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
   100% {
     /* show the element */
@@ -183,10 +198,10 @@ body {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
   100% {
     opacity: 1;
@@ -197,7 +212,7 @@ body {
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(3rem);
   }
   100% {
     opacity: 1;
