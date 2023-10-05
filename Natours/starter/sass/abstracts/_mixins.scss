@@ -1,0 +1,9 @@
+//  Reusable Piece Of Code
+//
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
