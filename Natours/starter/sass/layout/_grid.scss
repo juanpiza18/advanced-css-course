@@ -2,7 +2,6 @@
     // Recomendation to use 1140px
     // width max enought space 
     max-width: $grid-width;
-    background-color: #eee;
     // left and right will be the same that is why is centered
     margin: 0 auto;
 
@@ -14,8 +13,6 @@
 
     // Select columns and apply style
     [class ^= "col"] {
-        color: black;
-        background-color: orangered;
         float: left;
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
