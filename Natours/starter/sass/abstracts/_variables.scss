@@ -10,6 +10,7 @@ $color-tertiary-light: #2998ff;
 $color-tertiary-dark: #5643fa;
 
 $color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
 
 $color-grey-dark: #777;
 $color-white: #fff;
@@ -22,3 +23,6 @@ $default-font-size: 1.6rem;
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
+
+// BOX Shadows
+$box-shadow-1: 0 1.5rem 4rem rgba($color-black, 0.4);
